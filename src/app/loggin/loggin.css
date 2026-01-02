@@ -1,0 +1,30 @@
+.login-container {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+}
