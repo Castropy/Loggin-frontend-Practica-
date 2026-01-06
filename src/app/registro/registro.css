@@ -1,0 +1,25 @@
+.registro-container{
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: rgb(48, 48, 148);
+}
+
+.registro-container h2{
+    margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(151, 196, 238);
+}
