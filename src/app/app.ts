@@ -1,12 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LogginComponent } from './login/login.component';
+import { LoginComponent } from './login/login.component';
+import { Homepage } from './homepage/homepage.component';
   // 👈 importa tu componente
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LogginComponent],  // 👈 agrégalo aquí
+  imports: [RouterOutlet, LoginComponent, Homepage],  // 👈 agrégalo aquí
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
