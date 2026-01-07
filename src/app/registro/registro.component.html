@@ -1,15 +1,15 @@
 <div class="registro-container">
   <h2>Registro</h2>
   
-  <form>
+  <form [formGroup]="form" (ngSubmit)="registrar()">
     <div>
-      <input type="text" placeholder="Nombre de usuario" />
+      <input type="text" placeholder="Nombre de usuario" formControlName="username" />
     </div>
     <div>
-      <input type="email" placeholder="Correo electrónico" />
+      <input type="email" placeholder="Correo electrónico" formControlName="email" />
     </div>
     <div>
-      <input type="password" placeholder="Contraseña" />
+      <input type="password" placeholder="Contraseña" formControlName="password" />
     </div>
     <div class="buttons">
       <button type="submit">Registrar</button>
