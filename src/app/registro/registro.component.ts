@@ -28,7 +28,7 @@ export class RegistroComponent {
 
   registrar() {
     if (this.form.valid) {
-      this.http.post('http://localhost:8000/api/registro/', this.form.value)
+      this.http.post('http://localhost:8000/api/auth/register/', this.form.value)
         .subscribe({
           next: () => {
             alert('Usuario registrado con éxito');
