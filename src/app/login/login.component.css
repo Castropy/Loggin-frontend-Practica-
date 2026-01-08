@@ -63,3 +63,33 @@
 .buttons button[type="button"]:hover {
   background-color: #7ab0e0;
 }
+
+
+/* --- estilos originales --- */
+.login-container {
+  /* ... */
+}
+
+/* --- nuevos estilos para los inputs con íconos --- */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+.input-group i {
+  color: #303094;
+  margin-right: 8px;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  outline: none;
+  font-size: 14px;
+}
