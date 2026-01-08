@@ -1,33 +1,65 @@
 .login-container {
-  width: 300px;
-  margin: 50px auto;
+  width: 320px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
   text-align: center;
   font-family: Arial, sans-serif;
-  color: rgb(48, 48, 148);
+  color: #303094;
 }
 
 .login-container h2 {
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .login-container input {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
 
+.login-container input:focus {
+  border-color: #97c4ee;
+  outline: none;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .buttons button {
   flex: 1;
   margin: 0 5px;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
-  background-color: rgb(151, 196, 238);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.buttons button[type="submit"] {
+  background-color: #303094;
+  color: white;
+}
+
+.buttons button[type="submit"]:hover {
+  background-color: #202070;
+}
+
+.buttons button[type="button"] {
+  background-color: #97c4ee;
+  color: #303094;
+}
+
+.buttons button[type="button"]:hover {
+  background-color: #7ab0e0;
 }

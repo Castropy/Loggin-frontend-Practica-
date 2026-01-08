@@ -34,7 +34,7 @@ export class LoginComponent {
             localStorage.setItem('access_token', res.access);
             localStorage.setItem('refresh_token', res.refresh);
 
-            alert('Ingreso exitoso');
+            
             this.router.navigate(['/homepage']);
           },
           error: () => {
