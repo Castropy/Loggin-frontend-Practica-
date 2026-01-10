@@ -13,6 +13,8 @@
 .registro-container h2 {
   margin-bottom: 20px;
   font-weight: bold;
+  background-color: #e6f0fa;
+  border: 1px solid #d0d7e2;
 }
 
 /* Inputs con íconos */
@@ -76,8 +78,4 @@
 }
 
 
-.registro-container {
-  background-color: #e6f0fa;
-  border: 1px solid #d0d7e2;
-}
 
