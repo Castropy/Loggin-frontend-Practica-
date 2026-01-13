@@ -1,20 +1,33 @@
+/* --- Fondo general de toda la pantalla --- */
+.registro-page {
+  height: 100vh;
+  background-image: url('/assets/background_login.jpg'); /* tu imagen en assets */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centra vertical y horizontal */
+}
+
 .registro-container {
-  width: 320px; /* igual que login */
-  margin: 60px auto;
+  width: 320px;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   text-align: center;
   font-family: Arial, sans-serif;
   color: #303094;
+
+  background: rgba(255, 255, 255, 0.3); /* capa semitransparente */
+  backdrop-filter: blur(10px);           /* difuminado */
+  -webkit-backdrop-filter: blur(10px);   /* soporte Safari */
 }
 
 .registro-container h2 {
   margin-bottom: 20px;
   font-weight: bold;
-  background-color: #e6f0fa;
-  border: 1px solid #d0d7e2;
 }
 
 /* Inputs con íconos */
