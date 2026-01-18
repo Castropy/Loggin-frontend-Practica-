@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // 1. Importar ChangeDetectorRef
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css',
 })
 export class Homepage implements OnInit {
-  // Controla qué vista se muestra
   showWelcome: boolean = true;
 
+  // 2. Inyectarlo en el constructor
+  constructor(private cdr: ChangeDetectorRef) {}
+
   ngOnInit(): void {
-    // Después de 2000ms (2 segundos), cambiamos el estado
     setTimeout(() => {
       this.showWelcome = false;
       console.log('Cambiando a contenido principal...');
+      
+      // 3. Notificar manualmente a Angular que hubo un cambio
+      this.cdr.detectChanges(); 
     }, 2000);
   }
 }
