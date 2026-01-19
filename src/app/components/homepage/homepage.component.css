@@ -1,15 +1,89 @@
-/* Contenedor base que no se anima para no ocultar lo que viene después */
+/* Contenedor base */
 .viewport {
+  display: flex;
+  flex-direction: column; /* Cambiado para permitir Navbar arriba y contenido al centro */
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f2f5;
+  margin: 0;
+  position: relative;
+}
+
+/* --- NUEVA NAVBAR --- */
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end; /* Alinea el botón a la derecha */
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: absolute; /* Para que no empuje el contenido central hacia abajo */
+  top: 0;
+  z-index: 100;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.btn-config {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-config:hover { background: #2563eb; }
+
+/* Menú Desplegable */
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  min-width: 180px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #4b5563;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover { background: #f9fafb; }
+
+.logout {
+  color: #ef4444;
+  font-weight: bold;
+  border-top: 1px solid #f3f4f6;
+}
+
+/* --- LOGICA CENTRAL (Tu código original) --- */
+.content-wrapper {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #f0f2f5; /* Un gris muy claro para notar el cambio */
-  margin: 0;
+  width: 100%;
 }
 
-/* Capa de bienvenida */
 .welcome-overlay {
   display: flex;
   justify-content: center;
@@ -20,7 +94,6 @@
   font-size: 4rem;
   font-weight: bold;
   color: #3b82f6;
-  /* Animación de 2s: aparece, se queda y desaparece */
   animation: welcomeFade 2s ease-in-out forwards;
 }
 
@@ -31,7 +104,6 @@
   100% { opacity: 0; transform: translateY(-20px); }
 }
 
-/* El contenido principal aparece con su propia animación suave */
 .main-content {
   animation: fadeInFinal 0.5s ease-in forwards;
   text-align: center;
