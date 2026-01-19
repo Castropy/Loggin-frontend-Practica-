@@ -48,6 +48,6 @@ export class LoginComponent {
             alert('Usuario o contraseña incorrecta');
           }
         });
-    }
+    } 
   }
 }
