@@ -1,15 +1,16 @@
 <div class="viewport">
   <nav class="navbar">
     <div class="user-menu">
-      <button class="btn-config" (click)="toggleMenu()">
-        Configuración ▼
+      <button class="btn-config" (click)="toggleMenu(); $event.stopPropagation()">
+        Configuración 
+        <span class="arrow" [class.rotate]="menuAbierto()">▼</span>
       </button>
 
       @if (menuAbierto()) {
         <div class="dropdown">
           <button class="dropdown-item">Mi Perfil</button>
           <button class="dropdown-item">Ajustes</button>
-          <button class="dropdown-item logout" (click)="cerrarSesion()">
+          <button class="dropdown-item logout" (click)="solicitarCierreSesion()">
             Cerrar Sesión
           </button>
         </div>
@@ -29,4 +30,19 @@
       </div>
     }
   </div>
+
+  @if (showLogoutModal()) {
+    <div class="modal-overlay" (click)="cancelarCierreSesion()">
+      <div class="modal-card" (click)="$event.stopPropagation()">
+        <div class="modal-icon">👋</div>
+        <h2>¿Ya te vas?</h2>
+        <p>Tu sesión se cerrará de forma segura. ¿Deseas continuar?</p>
+        
+        <div class="modal-actions">
+          <button class="btn-cancel" (click)="cancelarCierreSesion()">Cancelar</button>
+          <button class="btn-confirm" (click)="ejecutarCierreSesion()">Cerrar Sesión</button>
+        </div>
+      </div>
+    </div>
+  }
 </div>
