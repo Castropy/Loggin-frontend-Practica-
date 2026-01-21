@@ -11,6 +11,7 @@
 }
 
 /* Navbar */
+/* --- Navbar Animado --- */
 .navbar {
   width: 100%;
   height: 60px;
@@ -19,11 +20,27 @@
   align-items: center;
   padding: 0 30px;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #778791e1;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   position: absolute;
   top: 0;
   z-index: 100;
+  
+  /* Aplica la animación de entrada al cargar el componente */
+  animation: navbarSlideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Define la secuencia de movimiento: inicia fuera de la pantalla (arriba) 
+   y se desliza hasta su posición original con un aumento de opacidad */
+@keyframes navbarSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .user-menu { position: relative; }
